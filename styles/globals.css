@@ -1,0 +1,409 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #fafafa;
+  color: #333;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+.site-header {
+  background: #fff;
+  padding: 1rem 0;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.nav a {
+  margin-right: 1rem;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.nav a:hover {
+  color: #0070f3;
+}
+
+.search input {
+  padding: 0.4rem 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Filters */
+.filters {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* globals.css */
+
+/* Layout */
+.main-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Hide filter on mobile */
+@media (max-width: 768px) {
+  .filter-bar {
+    display: none;
+  }
+}
+
+/* Filter Bar */
+.filter-bar {
+  width: 250px;
+  background: #fff;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  height: fit-content;
+}
+
+.filter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.filter-header h3 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.hide-btn {
+  background: none;
+  border: none;
+  color: #0070f3;
+  cursor: pointer;
+}
+
+.filter-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.filter-section label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.filter-section select {
+  width: 100%;
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Product grid takes remaining space */
+.product-section {
+  flex: 1;
+}
+/* =========================
+   FILTER SIDEBAR (Final)
+========================= */
+.main-container {
+  display: flex;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* Left Sidebar */
+.filter-sidebar {
+  width: 280px;
+  background: #fff;
+  border-right: 1px solid #ddd;
+  padding: 20px;
+  height: calc(100vh - 120px);
+  position: sticky;
+  top: 80px;
+  overflow-y: auto;
+  animation: slideIn 0.3s ease-in-out;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Filter Top Bar */
+.filter-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.filter-top h3 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.hide-filter-btn {
+  background: none;
+  border: none;
+  color: #0070f3;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.hide-filter-btn:hover {
+  color: #e63946;
+}
+
+/* Each filter group */
+.filter-group {
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+}
+.filter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.filter-group h4 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+.filter-option {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #444;
+}
+.filter-options {
+  margin-top: 5px;
+  padding-left: 10px;
+}
+
+.filter-option input {
+  margin-right: 8px;
+  accent-color: #0070f3;
+}
+
+/* Product Section */
+.product-section {
+  flex: 1;
+  padding: 10px 20px;
+  background: transparent;
+}
+
+/* Filter Header (Top Line: item count + button) */
+.filter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+/* Show Filter Button */
+.toggle-filter-btn {
+  background: #000;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.toggle-filter-btn:hover {
+  background: #333;
+}
+
+/* RESPONSIVE: Hide sidebar on mobile */
+@media (max-width: 768px) {
+  .filter-sidebar {
+    display: none;
+  }
+
+  .toggle-filter-btn {
+    display: inline-block;
+  }
+
+  .main-container {
+    flex-direction: column;
+  }
+}
+
+
+/* Sticky filter + recommend bar */
+.sticky-filter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 80px;
+  background: #fff;
+  padding: 10px 20px;
+  border-bottom: 1px solid #eee;
+  z-index: 100;
+}
+
+/* Recommend box */
+.recommend-box {
+  position: relative;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 8px 12px;
+  cursor: pointer;
+  background: #fafafa;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.recommend-box:hover {
+  background: #f2f2f2;
+}
+
+.recommend-box .arrow {
+  font-size: 12px;
+  margin-left: auto;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  width: 200px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 5px 0;
+  z-index: 1000;
+}
+
+.dropdown-menu li {
+  padding: 10px 15px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.dropdown-menu li:hover {
+  background: #f7f7f7;
+}
+
+.dropdown-menu li.active {
+  font-weight: 600;
+  color: #0070f3;
+}
+
+.dropdown-menu .tick {
+  color: #0070f3;
+  font-weight: bold;
+}
+
+
+.price-slider {
+  padding: 10px 0;
+}
+
+.price-slider input[type="range"] {
+  width: 100%;
+  cursor: pointer;
+  accent-color: #ff3e6c;
+}
+
+.price-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-top: 4px;
+}

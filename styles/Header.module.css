@@ -1,0 +1,154 @@
+.header {
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+/* --- Top bar --- */
+.topBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 48px;
+  position: relative;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.logo {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+/* ✅ Centered title */
+.title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #111;
+  margin: 0;
+}
+
+/* --- Icons Section --- */
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.icon {
+  width: 22px;
+  height: 22px;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.icon:hover {
+  color: #000;
+}
+
+.langSelect {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 3px 6px;
+  font-size: 13px;
+  background: #fff;
+  cursor: pointer;
+  outline: none;
+}
+
+.langSelect:hover {
+  border-color: #999;
+}
+
+/* --- Navigation bar --- */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+  padding: 12px 0;
+  border-top: 1px solid #eee;
+  background: #fff;
+}
+
+.navItem {
+  position: relative;
+  font-size: 15px;
+  font-weight: 500;
+  color: #444;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px 0;
+  transition: color 0.2s ease;
+}
+
+.navItem:hover {
+  color: #000;
+}
+
+/* Underline animation */
+.navItem::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background: #000;
+  transition: width 0.3s ease;
+}
+
+.navItem:hover::after {
+  width: 100%;
+}
+
+/* --- Company Info Section --- */
+.companyInfo {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #fafafa; /* slight tint to separate from navbar */
+  border-top: 1px solid #eee;
+  margin-top: 10px;
+}
+
+.companyTitle {
+  font-family: "Simplon Norm", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 60px;
+  line-height: 100%;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000;
+  opacity: 1;
+
+  white-space: nowrap; /* ✅ forces single line */
+  width: auto;
+  margin: 40px auto 0;
+  position: relative;
+}
+
+
+
+.companyDescription {
+  font-family: "Simplon Norm", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  text-align: center;
+  color: #555;
+  width: 666px;
+  margin: 16px auto 0;
+}

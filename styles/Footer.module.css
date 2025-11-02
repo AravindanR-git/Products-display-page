@@ -1,0 +1,171 @@
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 4rem 6rem;
+  font-family: "Simplon Norm", sans-serif;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* --- TOP SECTION --- */
+.topSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.left,
+.right {
+  flex: 1;
+  min-width: 300px;
+}
+
+.heading {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.subtext {
+  font-size: 0.95rem;
+  color: #ccc;
+  margin-bottom: 0.6rem;
+}
+
+.subscribeContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.emailInput {
+  flex: 1;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  font-size: 0.95rem;
+}
+
+.subscribeButton {
+  background-color: #fff;
+  color: #000;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.subscribeButton:hover {
+  background-color: #ddd;
+}
+
+.currency {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.95rem;
+}
+
+.currencyNote {
+  font-size: 0.8rem;
+  color: #aaa;
+  margin-top: 0.4rem;
+  line-height: 1.4;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #333;
+  margin: 2rem 0;
+}
+
+/* --- BOTTOM SECTION --- */
+.bottomSection {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.column {
+  flex: 1;
+  min-width: 220px;
+}
+
+.columnTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.column ul li {
+  color: #bbb;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+.column ul li:hover {
+  color: #fff;
+}
+
+.socialIcons,
+.paymentIcons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 1rem;
+}
+
+.socialIcons svg {
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.socialIcons svg:hover {
+  transform: scale(1.1);
+}
+
+.paymentIcons svg {
+  font-size: 2rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.paymentIcons svg:hover {
+  transform: scale(1.1);
+}
+
+.copyright {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-top: 1rem;
+}
+.flagCircle {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  overflow: hidden;
+  box-shadow: 0 0 0 1px #ccc;
+}
+
